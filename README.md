@@ -23,7 +23,18 @@ npm install --global yarn
 Then you can run the following commands to install Content Knowledge
 
 ```
-git clone git@github.com:bbc/simorgh.git
-cd contentKnowledge
+git clone https://github.com/eho008/ContentKnowledge
+
 yarn install
+
+```
+
+## Local Development
+
+Run Content Knol
+
+To run this application locally, run
+
+```
+yarn dev
 ```
