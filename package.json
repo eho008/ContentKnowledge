@@ -1,0 +1,17 @@
+{
+  "name": "ContentKnowledge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:eho008/ContentKnowledge.git",
+  "author": "Elias Harder <elias941601@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd contentKnowledge && yarn run dev ",
+    "server": "cd server && yarn start",
+    "dev": "concurrently \"yarn client\" \"yarn server\"",
+    "postinstall": "cd server && yarn && cd ../contentKnowledge && yarn"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
