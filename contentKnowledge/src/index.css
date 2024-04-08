@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active a {
+  background-color: white;
+  color: black;
+}
+
+.active {
+  background-color: white;
+}
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.avatar-root {
+  width: 16px;
+  height: 16px;
+}
+
+.card-link {
+  width: 240px;
+}
+
+.filter-grey {
+  filter: invert(100%) sepia(35%) saturate(555%) hue-rotate(177deg)
+    brightness(95%) contrast(93%);
+}
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.popup {
+  background-color: var(--gray-2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 85%;
+  height: 85%;
+}
+
+/* Apply backdrop blur effect */
+
+.point-container {
+  background-color: var(--gray-6);
+  border-radius: 10px;
+  width: 240px;
+  padding: 0.5rem;
+  break-inside: avoid-column;
+  margin-bottom: 0.5rem;
+}
+
+.note-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: auto;
+}
+
+.note-popup {
+  background-color: var(--gray-2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content-container {
+  height: 100vh;
+  background-color: var(--gray-3);
+}
+
+.form-styles {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray-3);
+}
+
+.flash-card {
+  width: 500px;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0.5rem;
+}
+
+.type-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.type-category {
+  display: flex;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.category-category {
+  display: flex;
+  flex-direction: column;
+}
+
+#fractional {
+  fill: none;
+  stroke: red;
+  stroke-width: 2;
+  stroke-dasharray: 125;
+  stroke-dashoffset: 125;
+
+  animation: rotate 1s ease-out forwards;
+}
+
+@keyframes rotate {
+  to {
+    stroke-dashoffset: var(--variable-to);
+  }
+}
+
+#whole {
+  fill: none;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.growss {
+  transition: all 0.2s ease-in-out;
+}
+
+.growss:hover {
+  transform: scale(1.1);
+}
+
+.card-main:hover .trash {
+  display: block;
+}
+
+.delete-popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 1rem;
+  z-index: 8;
+}
+
+.delete-popup {
+  background-color: var(--gray-2);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.frontside-open {
+  transition: opacity 0.01s linear 0.35s, transform 0.7s linear;
+  transform: rotateY(0deg);
+}
+
+.backside-closed {
+  transition: opacity 0.01s linear 0.35s, transform 0.7s linear;
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.frontside-closed {
+  transform: rotateY(180deg);
+  transition: opacity 0.01s linear 0.35s, transform 0.7s linear;
+  opacity: 0;
+}
+
+.backside-open {
+  transition: opacity 0.01s linear 0.35s, transform 0.7s linear;
+  opacity: 1;
+}
